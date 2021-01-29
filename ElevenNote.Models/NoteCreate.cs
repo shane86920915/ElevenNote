@@ -17,7 +17,6 @@ namespace ElevenNote.Models
         [MaxLength(8000)]
         public string Content { get; set; }
 
-        //Testing a change for git
-        //Testing a change for git
+      
     }
 }
