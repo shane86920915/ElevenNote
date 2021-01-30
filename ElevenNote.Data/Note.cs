@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,8 +14,14 @@ namespace ElevenNote.Data
         public int NoteId { get; set; }
         [Required]
         public Guid OwnerId { get; set; }
+
         [Required]
         public string Title { get; set; }
+
+        //[ForeignKey(nameof(Person))]
+        //public int PersonId { get; set; }
+        //public virtual Person Person { get; set; }
+
         [Required]
         public string Content { get; set; }
 
