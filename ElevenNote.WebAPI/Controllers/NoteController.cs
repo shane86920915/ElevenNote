@@ -29,6 +29,7 @@ namespace ElevenNote.WebAPI.Controllers
             var Notes = noteService.GetNotes();
             return Ok(Notes);
         }
+        [HttpPost]
         public IHttpActionResult Post(NoteCreate note)
         {
             if (!ModelState.IsValid)
@@ -42,9 +43,10 @@ namespace ElevenNote.WebAPI.Controllers
                 {
                     return InternalServerError();
 
-                    return Ok();
                 }
-
+                    return Ok();
         }
+
+       
     }
 }
