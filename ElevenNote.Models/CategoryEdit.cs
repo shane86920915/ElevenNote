@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace ElevenNote.Models
 {
-    class CategoryEdit
+    public class CategoryEdit
     {
+        public int CategoryId { get; set; }
+        public string CategoryName { get; set; }
+        public int NoteId { get; set; }
+        public DateTimeOffset? ModifiedUtc { get; set; }
     }
 }
