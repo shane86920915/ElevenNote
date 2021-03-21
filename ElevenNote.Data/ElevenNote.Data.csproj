@@ -96,15 +96,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Categories.cs" />
+    <Compile Include="Category.cs" />
     <Compile Include="IdentityModels.cs" />
     <Compile Include="Migrations\202101301511174_InitMigration.cs" />
     <Compile Include="Migrations\202101301511174_InitMigration.designer.cs">
       <DependentUpon>202101301511174_InitMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202103212117470_CreatedCategoryInDatabase.cs" />
+    <Compile Include="Migrations\202103212117470_CreatedCategoryInDatabase.designer.cs">
+      <DependentUpon>202103212117470_CreatedCategoryInDatabase.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Note.cs" />
-    <Compile Include="Person.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -116,6 +119,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202101301511174_InitMigration.resx">
       <DependentUpon>202101301511174_InitMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103212117470_CreatedCategoryInDatabase.resx">
+      <DependentUpon>202103212117470_CreatedCategoryInDatabase.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
