@@ -54,6 +54,7 @@ namespace ElevenNote.Services
                 return query.ToArray();
             }
         }
+        
         public NoteDetail GetNoteById(int id)
         {
             using (var ctx = new ApplicationDbContext())

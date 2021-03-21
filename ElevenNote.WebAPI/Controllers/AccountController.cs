@@ -330,6 +330,7 @@ namespace ElevenNote.WebAPI.Controllers
             }
 
             var user = new ApplicationUser() { UserName = model.Email, Email = model.Email };
+            
 
             IdentityResult result = await UserManager.CreateAsync(user, model.Password);
 

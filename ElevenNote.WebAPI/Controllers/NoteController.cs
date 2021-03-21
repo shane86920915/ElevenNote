@@ -25,10 +25,11 @@ namespace ElevenNote.WebAPI.Controllers
 
         public IHttpActionResult Get()
         {
-            NoteService noteService = CreateNoteService();
+            var noteService = CreateNoteService();
             var Notes = noteService.GetNotes();
             return Ok(Notes);
         }
+        
         [HttpPost]
         public IHttpActionResult Post(NoteCreate note)
         {

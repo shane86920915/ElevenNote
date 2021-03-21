@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ElevenNote.Data
+namespace ElevenNote.Models
 {
-    public class Person
+    class CategoryListItem
     {
-        public int Id { get; set; }
-        public string Name { get; set; }
     }
 }

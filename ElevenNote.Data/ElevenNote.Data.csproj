@@ -96,6 +96,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Categories.cs" />
     <Compile Include="IdentityModels.cs" />
     <Compile Include="Migrations\202101301511174_InitMigration.cs" />
     <Compile Include="Migrations\202101301511174_InitMigration.designer.cs">
@@ -108,6 +109,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="CodeTemplates\EFModelFromDatabase\Context.cs.t4" />
+    <None Include="CodeTemplates\EFModelFromDatabase\EntityType.cs.t4" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
