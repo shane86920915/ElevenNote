@@ -50,6 +50,7 @@ namespace ElevenNote.Services
                     ctx
                     .Categories
                     .Single(e => e.CategoryId == id);
+
                 return new CategoryDetails
                 {
                     CategoryId = entity.CategoryId,
@@ -61,15 +62,21 @@ namespace ElevenNote.Services
                         Title = e.Title,
                         CreatedUtc = e.CreatedUtc,
                     }).ToList()
-            };
-
-
-
-
+                };
+            }
         }
 
-
+        public bool UpdateCategory(CategoryEdit model)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity=
+                    ctx
+                    .Categories
+                    .Select
+                        
+                        
+            }
     }
-
 }
 

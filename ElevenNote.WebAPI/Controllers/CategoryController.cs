@@ -16,11 +16,39 @@ namespace ElevenNote.WebAPI.Controllers
     {
         private CategoryService _categoryService = new CategoryService();
 
+
+
+        public IHttpActionResult Post(CategoryCreate category)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+            
+
+            if (!_categoryService.CreateCategory(category))
+                return InternalServerError();
+
+            return Ok();
+        }
+
+        [HttpGet]
         public IHttpActionResult Get()
         {
             var categories = _categoryService.GetCategories();
             return Ok(categories);
         }
+
+        public IHttpActionResult Get(int id)
+        {
+            var categories = _categoryService.GetCategoryById(id);
+            return Ok (categories);
+        }
+
+        [HttpPut]
+        public IHttpActionResult Update()
+        {
+
+        }
+
 
     }
 }

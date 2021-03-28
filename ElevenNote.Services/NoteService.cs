@@ -47,7 +47,7 @@ namespace ElevenNote.Services
                         e =>
                             new NoteListItem
                             {
-                                NoteId = e.NoteId,//the properties on the left is  the entity on the right that we are using
+                                NoteId = e.NoteId,
                                 Title = e.Title,
                                 Content = e.Content,
                                 CreatedUtc = e.CreatedUtc,
