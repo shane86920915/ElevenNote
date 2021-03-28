@@ -82,8 +82,8 @@ namespace ElevenNote.Services
                      ModifiedUtc = entity.ModifiedUtc,
                      CategoryId = entity.CategoryId,
                      Category = new CategoryListItem() { CategoryId = entity.Category.CategoryId, Name = entity.Category.Name }
-                     //I am taking the category from note detail and creating a new categorylistitem
-                     //I'm setting the categoryId from categorylistitem equal to the entity through the foreign key  
+                     //taking the category from note detail and creating a new categorylistitem
+                     // setting the categoryId from categorylistitem equal to the entity through the foreign key  
                  };
             }
         }

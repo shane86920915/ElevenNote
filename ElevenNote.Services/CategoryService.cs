@@ -70,13 +70,30 @@ namespace ElevenNote.Services
         {
             using (var ctx = new ApplicationDbContext())
             {
-                var entity=
+                var entity =
                     ctx
                     .Categories
-                    .Select
-                        
-                        
+                    .Single(e => e.CategoryId == model.CategoryId);
+                entity.Name = model.Name;
+
+                return ctx.SaveChanges() == 1;
             }
+        }
+
+        public bool DeleteCategory(int id)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                    .Categories
+                    .Single(e => e.CategoryId == id);
+
+                ctx.Categories.Remove(entity);
+                return ctx.SaveChanges() == 1;
+            }
+        }
     }
 }
+
 

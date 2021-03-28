@@ -44,9 +44,27 @@ namespace ElevenNote.WebAPI.Controllers
         }
 
         [HttpPut]
-        public IHttpActionResult Update()
+        public IHttpActionResult Update(CategoryEdit category)
         {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
 
+            if (!_categoryService.UpdateCategory(category))
+                return InternalServerError();
+
+            return Ok();
+
+        }
+
+        public IHttpActionResult Delete(int id)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            if (!_categoryService.DeleteCategory(id)) 
+            return InternalServerError();
+
+            return Ok();
         }
 
 
