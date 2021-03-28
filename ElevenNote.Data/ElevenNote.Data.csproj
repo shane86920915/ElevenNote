@@ -106,6 +106,10 @@
     <Compile Include="Migrations\202103212117470_CreatedCategoryInDatabase.designer.cs">
       <DependentUpon>202103212117470_CreatedCategoryInDatabase.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202103212128063_AddedDataAnnotationToCategoryPK.cs" />
+    <Compile Include="Migrations\202103212128063_AddedDataAnnotationToCategoryPK.designer.cs">
+      <DependentUpon>202103212128063_AddedDataAnnotationToCategoryPK.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Note.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -122,6 +126,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202103212117470_CreatedCategoryInDatabase.resx">
       <DependentUpon>202103212117470_CreatedCategoryInDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103212128063_AddedDataAnnotationToCategoryPK.resx">
+      <DependentUpon>202103212128063_AddedDataAnnotationToCategoryPK.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

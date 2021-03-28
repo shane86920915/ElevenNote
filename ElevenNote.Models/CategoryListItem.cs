@@ -6,12 +6,10 @@ using System.Threading.Tasks;
 
 namespace ElevenNote.Models
 {
-    public class CategoryDetails
+    public class CategoryListItem
     {
         public int CategoryId { get; set; }
         public string Name { get; set; }
-        public int NoteId { get; set; }
-        public virtual List<NoteListItem> Notes { get; set; }
-
+       
     }
 }
